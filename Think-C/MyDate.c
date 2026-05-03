@@ -1,20 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main (void) 
+void PrintDateAmerican(int day, int month, int year)
 {
-	int day,month,year;
-	char slash,dot;
-
-	day = 2;
-	month = 5;
-	year = 2026;
-	slash = '/';
-	dot = '.';
-
+	char slash = '/';
 	printf("American format:\n");
 	printf("%i%c%i%c%i\n",month,slash,day,slash,year);
+}
+
+void PrintDateEuropean(int day, int month, int year)
+{
+	char dot = '.';
 	printf("European format:\n");
 	printf("%i%c%i%c%i\n",day,dot,month,dot,year);
+}
+
+int main (void) 
+{
+	PrintDateAmerican(3,5,2026);
+	PrintDateEuropean(3,5,2026);	
 	return (EXIT_SUCCESS);
 }
