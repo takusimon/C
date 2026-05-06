@@ -16,6 +16,13 @@ int Power(int base, int exp)
 int main (void)
 {
 
-	printf("%i",Power(2,2));
+	int base, exp;
+
+	printf("Enter the base value:\n");
+	scanf("%i", &base);
+	printf("Enter the exponent:\n");
+	scanf("%i", &exp);
+
+	printf("Answer =  %i",Power(base,exp));
 	return EXIT_SUCCESS;
 }
